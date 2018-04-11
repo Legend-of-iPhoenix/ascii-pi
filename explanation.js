@@ -5,7 +5,7 @@ document.body.innerHTML = atob("/AAAAAPwAAAAA+AAAAAD4eD/h//H4P8H/9/g/wf/3+D/D///
     .padStart(8) // force it to be 8 digits long
     .split('') // split each 8-digit byte into bits.
     .map(x => "# ".charAt(x)) // map each bit into a on (#) or off ( ) character. Because the data is inverted, we invert it once again
-    .join('')) // merge the bytes
+    .join('')) // merge the bits
   .join('') // merge all of the bytes into a long string
   .match(/.{40}/g) // split the long string into 40 character chunks
   .map(x => '<pre style="margin: 0">' + x + '</pre>') // surround each chunk with a <pre> tag, with margin set to 0
